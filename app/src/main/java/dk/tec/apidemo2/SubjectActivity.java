@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,11 +20,15 @@ import java.util.Iterator;
 public class SubjectActivity extends AppCompatActivity {
 
     TextView txt;
+    private Button btnEditEmail, btnDeletePerson;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject);
+
+        btnEditEmail = findViewById(R.id.btnEditEmail);
+        btnDeletePerson = findViewById(R.id.btnDeletePerson);
 
         ActionBar actionBar = getSupportActionBar();
         if(actionBar != null) {
@@ -35,10 +40,19 @@ public class SubjectActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String url = intent.getStringExtra("url");
         txt.setText(url + "\n");
-        fetcData(url);
+        fetchData(url);
+
+
+        btnEditEmail.setOnClickListener(v -> {
+            //Brug id'et, kald til api, post.
+        });
+
+        btnDeletePerson.setOnClickListener(v -> {
+            //Brug id'et, kald til api, delete.
+        });
     }
 
-    private void fetcData(String url) {
+    private void fetchData(String url) {
         SwapiDataService dataService = new SwapiDataService(SubjectActivity.this);
         dataService.getJsonObject(url, new SwapiResponseListener() {
             @Override

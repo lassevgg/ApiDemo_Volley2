@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/lasse/AndroidStudioProjects/ApiDemo_Volley2/app/src/main/res/layout/activity_create.xml" value="0.25625" />
+        <entry key="..\:/Users/lasse/AndroidStudioProjects/ApiDemo_Volley2/app/src/main/res/layout/activity_main.xml" value="0.1331081081081081" />
+        <entry key="..\:/Users/lasse/AndroidStudioProjects/ApiDemo_Volley2/app/src/main/res/layout/activity_subject.xml" value="0.25625" />
+        <entry key="..\:/Users/lasse/AndroidStudioProjects/ApiDemo_Volley2/app/src/main/res/layout/my_list_item.xml" value="0.25625" />
         <entry key="..\:/Users/psl/AppData/Local/Android/Sdk/platforms/android-30/data/res/layout/simple_list_item_1.xml" value="0.1546875" />
         <entry key="..\:/Users/psl/xperim/H4/231021104p/ApiDemo/app/src/main/res/layout/activity_main.xml" value="0.16510416666666666" />
         <entry key="..\:/Users/psl/xperim/H4/231021104p/ApiDemo2/app/src/main/res/layout/activity_main.xml" value="0.264" />
@@ -11,7 +15,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

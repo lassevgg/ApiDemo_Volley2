@@ -9,6 +9,7 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 public class SwapiDataService {
@@ -50,7 +51,11 @@ public class SwapiDataService {
                     @Override
                     public void onResponse(JSONArray response) {
                         //jsonObject[0] = response;
-                        listener.onDataReady(response);
+                        try {
+                            listener.onDataReady(response);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
                 },
                 new Response.ErrorListener() {
@@ -62,5 +67,4 @@ public class SwapiDataService {
         );
         MySingleton.getInstance(context).addToRequestQueue(request);
     }
-
 }
